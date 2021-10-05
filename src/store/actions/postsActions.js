@@ -8,7 +8,7 @@ export const fetchPosts = () => async (dispatch, getState) => {
 
   try {
     const response = await axios.get(
-      `https://jsonplaceholder.typicode.com/posts432`
+      `https://jsonplaceholder.typicode.com/posts`
     );
     dispatch({
       type: ActionTypes.FETCH_POSTS_SUCCESS,

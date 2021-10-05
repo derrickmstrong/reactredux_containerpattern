@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchPosts } from '../../store/actionCreators/postsActionCreator'
+import { fetchPosts } from '../../store/actions/postsActions'
 
 import Posts from './Posts'
 
