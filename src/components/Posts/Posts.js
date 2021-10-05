@@ -11,7 +11,7 @@ const Posts = ({ isLoading, posts, error, getPosts }) => {
 
   const render = () => {
     if (isLoading) return <h1>Loading...</h1>;
-    if (error) return <h1>Error: {error}</h1>;
+    if (error) return <h1>Error: {error.message}</h1>;
     if (posts) {
       return posts.map(post => {
         return (
