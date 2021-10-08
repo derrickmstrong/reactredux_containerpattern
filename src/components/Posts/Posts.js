@@ -1,13 +1,13 @@
+// Step 2 of Container pattern: Create UI component and use Container to access state
 import React, { useEffect } from 'react';
 
 const Posts = ({ isLoading, posts, error, getPosts }) => {
-  
   useEffect(() => {
     getPosts();
     return () => {};
   }, [getPosts]);
 
-  if (!posts) return null
+  if (!posts) return null;
 
   const render = () => {
     if (isLoading) return <h1>Loading...</h1>;

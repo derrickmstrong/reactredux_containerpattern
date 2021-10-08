@@ -1,11 +1,13 @@
 import * as ActionTypes from '../actionTypes'
 
+// Initial State
 const initState = {
     isLoading: false,
     data: [],
     error: null
 }
 
+// Create reducer to determine the new state after action has been dispatched
 export const postsReducer = (state = initState, action) => {
     switch(action.type) {
         case ActionTypes.FETCH_POSTS_LOADING:

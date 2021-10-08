@@ -1,10 +1,16 @@
+// Step 1 of Container pattern: Connect to Redux Store and wrap Container around UI component
 import { connect } from 'react-redux';
-import { fetchPosts } from '../../store/actions/postsActions'
-import { selectFailedState, selectLoadingState, selectPostsData, selectPostsTitles } from '../../store/selectors';
+import { fetchPosts } from '../../store/actions/postsActions';
+import {
+  selectFailedState,
+  selectLoadingState,
+  selectPostsData,
+  selectPostsTitles,
+} from '../../store/selectors';
 
-import Posts from './Posts'
+import Posts from './Posts';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     isLoading: selectLoadingState(state),
     posts: selectPostsData(state),
@@ -12,7 +18,7 @@ const mapStateToProps = (state) => {
     error: selectFailedState(state),
   };
 };
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     getPosts: () => dispatch(fetchPosts()),
   };

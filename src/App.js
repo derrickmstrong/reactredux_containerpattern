@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+// Import default Posts Component via Post Folder
 import { Posts } from './components/Posts';
 
 const App = () => {
